@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="dist/css/swiper.min.css"/>
+    <script src="fontsize.js"></script>
+    <title></title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            text-decoration: none;
+        }
+        .clear{
+            clear: both;
+        }
+        .logo{
+            width: 1.13rem;
+            height: 0.4rem;
+            background: url("images/sprites.png") 0.05rem -2.19rem ;
+            background-size: 4rem 4rem;
+            float: left;
+        }
+        input{
+            width: 4.8rem;
+            height: 0.41rem;
+            float: left;
+            border-radius: 0.2rem;
+            border: 0;
+            margin-left: 0.1rem;
+            margin-top: 0.05rem;
+            background-image: url("images/sprites.png");
+            background-repeat: no-repeat;
+            background-position:-1.1rem -2.2rem ;
+            background-size: 4rem 4rem;
+            background-color: white;
+            padding-left: 0.5rem ;
+            color: grey;
+        }
+        header a{
+            display: block;
+            font-size: 0.16rem;
+            float: right;
+            color: white;
+            padding-top: 0.1rem;
+        }
+        header{
+            width: 7.2rem;
+            height: 0.6rem;
+            padding-top: 0.1rem;
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 99;
+            background: #b50000;
+            opacity: 0.7;
+        }
+        .swiper-wrapper{
+            width: 7.2rem;
+            height: 3.5rem;
+        }
+        .swiper-wrapper img{
+            width: 100%;
+            height: 100%;
+        }
+        nav li{
+            width: 1.1rem;
+            float: left;
+            margin-left: 0.5rem;font-size: 0.16rem;
+            text-align: center;
+            color: grey;
+        }
+        nav li a{
+
+            display: block;
+            width: 0.8rem;
+            height: 0.8rem;
+            margin: 0.2rem auto;
+
+        }
+        nav li:first-child{
+            margin-left: 0.6rem;
+        }
+        nav li:nth-of-type(4){
+            margin-right: 0.6rem;
+        }
+        nav li:nth-of-type(5){
+            margin-left: 0.6rem;
+        }
+        nav li img{
+            width: 100%;
+            height: 100%;
+        }
+        .grey{
+            width: 7.2rem;
+            height: 0.1rem;
+            background: #f4f4f4;
+            margin-top: 0.2rem;
+    }
+        .top .zsms span{
+            width: 0.4rem;
+            height: 0.5rem;
+            float: left;
+            font-size: 0;
+            margin-top: 0.1rem;
+            padding: 0 0.12rem 0 0.12rem;
+        }
+        .top .zsms span img{
+            width: 100%;
+            height: 100%;
+        }
+        .top .zsms h1{
+            font-size: 0.14rem;
+            font-weight: normal;
+            color: red;
+            float: left;
+            padding-top: 0.2rem;
+            padding-right: 0.15rem;
+        }
+        .top .zsms ul{
+            float: left;
+        }
+        .top .zsms li{
+            width: 0.25rem;
+            height: 0.27rem;
+            background: black;
+            color: white;
+            font-size: 0.1rem;
+            float: left;
+            margin-left: 0.08rem;
+            text-align: center;
+            line-height: 0.27rem;
+            margin-top: 0.22rem;
+        }
+        .top .zsms a{
+           float: right;
+            font-size: 0.12rem;
+            padding-top: 0.2rem;
+            color: black;
+            margin-right: 0.2rem;
+        }
+        .top .shangpin .box{
+            margin-top: 0.3rem;
+            width: 1.50rem;
+            height: 1.50rem;
+            float: left;
+            padding: 0 0.43rem 0 0.43rem;
+        }
+        .top .shangpin .box:nth-of-type(2){
+            border-right: 0.01rem solid gainsboro;
+            border-left: 0.01rem solid gainsboro;
+        }
+        .top .shangpin .box img{
+            width: 100%;
+            height: 100%;
+        }
+        .top .shangpin .box p{
+            font-size: 0.1rem;
+            color: red;
+            text-align: center;
+        }
+        .top .shangpin .box h2{
+            font-size: 0.1rem;
+            font-weight: normal;
+            text-align: center;
+            text-decoration: line-through;
+            color: grey;
+        }
+        .middle1{
+            padding-top: 1rem;
+        }
+        .middle1 p{
+            font-size: 0.14rem;
+            color: grey;
+            font-weight: normal;
+            border-left: 0.08rem solid #d65057;
+            padding-left: 0.15rem;
+            margin-left: 0.15rem;
+            margin-top: 0.15rem;
+        }
+        .middle1 h1{
+            width: 7.2rem;
+            border-bottom: 0.01rem solid gainsboro;
+            padding-bottom: 0.2rem;
+        }
+        .middle1 .img{
+            width: 3.2rem;
+            height: 3.46rem;
+            float: left;
+            border-right:0.01rem solid gainsboro ;
+            margin-left: 0.3rem;
+        }
+        .middle1 .img img{
+            width: 100%;
+            height: 100%;
+        }
+        .middle1 .pic{
+            float: left;
+            width: 3.49rem;
+        }
+        .middle1 .pic .pic1{
+            width: 3.49rem;
+            height: 1.94rem;
+            border-bottom: 0.01rem solid gainsboro;
+        }
+        .middle1 .pic .pic1 img{
+            width: 100%;
+
+        }
+        .middle1 .pic .pic2{
+            width: 3.2rem;
+            height: 1.73rem;
+        }
+        .middle1 .pic .pic2 img{
+            width: 100%;
+        }
+
+        .middle2 p{
+            font-size: 0.14rem;
+            color: grey;
+            font-weight: normal;
+            border-left: 0.08rem solid #d65057;
+            padding-left: 0.15rem;
+            margin-left: 0.15rem;
+            margin-top: 0.15rem;
+        }
+        .middle2 h1{
+            width: 7.2rem;
+            border-bottom: 0.01rem solid gainsboro;
+            padding-bottom: 0.2rem;
+        }
+        .middle2 .img{
+            width: 3.7rem;
+            height: 3.55rem;
+            float: left;
+
+
+        }
+        .middle2 .img img{
+            width: 100%;
+            height: 100%;
+        }
+        .middle2 .pic{
+            float: left;
+            width: 3.47rem;
+        }
+        .middle2 .pic .pic1{
+            width: 3.47rem;
+            height: 1.68rem;
+
+        }
+        .middle2 .pic .pic1 img{
+            width: 100%;
+
+        }
+        .middle2 .pic .pic2{
+            width: 3.47rem;
+            height: 1.68rem;
+        }
+        .middle2 .pic .pic2 img{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="logo"></div>
+    <input type="text" value="提示占位"/>
+    <a href="">登陆</a>
+</header>
+<div class="swiper-container">
+    <ul class="swiper-wrapper">
+        <li class="swiper-slide"><img src="images/l1.jpg" alt=""/></li>
+        <li class="swiper-slide"><img src="images/l2.jpg" alt=""/></li>
+        <li class="swiper-slide"><img src="images/l3.jpg" alt=""/></li>
+        <li class="swiper-slide"><img src="images/l4.jpg" alt=""/></li>
+        <li class="swiper-slide"><img src="images/l5.jpg" alt=""/></li>
+        <li class="swiper-slide"><img src="images/l6.jpg" alt=""/></li>
+        <li class="swiper-slide"><img src="images/l7.jpg" alt=""/></li>
+        <li class="swiper-slide"><img src="images/l8.jpg" alt=""/></li>
+    </ul>
+    <div class="swiper-pagination"></div>
+</div>
+
+<nav>
+    <ul>
+        <li><a href=""><img src="images/nav0.png" alt=""/></a>分类查询</li>
+        <li><a href=""><img src="images/nav1.png" alt=""/></a>分类查询</li>
+        <li><a href=""><img src="images/nav2.png" alt=""/></a>分类查询</li>
+        <li><a href=""><img src="images/nav3.png" alt=""/></a>分类查询</li>
+        <li><a href=""><img src="images/nav4.png" alt=""/></a>分类查询</li>
+        <li><a href=""><img src="images/nav5.png" alt=""/></a>分类查询</li>
+        <li><a href=""><img src="images/nav6.png" alt=""/></a>分类查询</li>
+        <li><a href=""><img src="images/nav7.png" alt=""/></a>分类查询</li>
+        <div class="clear"></div>
+    </ul>
+</nav>
+<div class="grey"></div>
+<section class="top">
+    <div class="zsms">
+        <span><img src="images/seckill-icon.png" alt=""/></span>
+        <h1>掌上秒杀</h1>
+        <ul>
+            <li class="h1"></li>
+            <li class="h2"></li>
+            <li style="background: white; color: black ; width: 0.1rem">:</li>
+            <li class="m1"></li>
+            <li class="m2"></li>
+            <li style="background: white; color: black; width: 0.1rem">:</li>
+            <li class="s1"></li>
+            <li class="s2"></li>
+            <div class="clear"></div>
+        </ul>
+        <a href="">更多></a>
+        <div class="clear"></div>
+    </div>
+    <div class="shangpin">
+        <div class="box"><img src="images/detail01.jpg" alt=""/><p>￥10.00</p><h2>￥100.00</h2></div>
+        <div class="box"><img src="images/detail02.jpg" alt=""/><p>￥10.00</p><h2>￥100.00</h2></div>
+        <div class="box"><img src="images/detail01.jpg" alt=""/><p>￥10.00</p><h2>￥100.00</h2></div>
+        <div class="clear"></div>
+    </div>
+
+</section>
+<section class="middle1">
+    <div class="grey"></div>
+    <h1><p>京东超市</p></h1>
+    <div class="img"><img src="images/cp1.jpg" alt=""/></div>
+    <div class="pic">
+        <div class="pic1"><img src="images/cp2.jpg" alt=""/></div>
+        <div class="pic2"><img src="images/cp3.jpg" alt=""/></div>
+    </div>
+    <div class="clear"></div>
+</section>
+<section class="middle2">
+    <div class="grey"></div>
+    <h1><p>京东超市</p></h1>
+
+    <div class="pic">
+        <div class="pic1"><img src="images/cp5.jpg" alt=""/></div>
+        <div class="pic2"><img src="images/cp6.jpg" alt=""/></div>
+    </div>
+    <div class="img" style="border-left: 0.01rem solid gainsboro;border-right: 0"><img src="images/cp4.jpg" alt=""/></div>
+<div class="clear"></div>
+</section>
+<section class="middle1" style="padding: 0">
+    <div class="grey" style="margin: 0"></div>
+    <h1><p>京东超市</p></h1>
+    <div class="img"><img src="images/cp1.jpg" alt=""/></div>
+    <div class="pic">
+        <div class="pic1"><img src="images/cp2.jpg" alt=""/></div>
+        <div class="pic2"><img src="images/cp3.jpg" alt=""/></div>
+    </div>
+    <div class="clear"></div>
+</section>
+</body>
+<script src="js/jquery-1.12.4.js"></script>
+<script src="dist/js/swiper.min.js"></script>
+<script src="dist/js/zepto.js"></script>
+<script>
+    var i=new Swiper('.swiper-container',{
+        pagination: '.swiper-pagination'
+    });
+
+    var x=18000;
+    setInterval(function(){
+        x=x-1;
+        var h=parseInt(x/3600);
+        var m=parseInt(x%3600/60);
+        var s=x%3600%60;
+        $(".h1").text(parseInt(h/10));
+        $(".h2").text(h%10);
+        $(".m1").text(parseInt(m/10));
+        $(".m2").text(m%10);
+        $(".s1").text(parseInt(s/10));
+        $(".s2").text(s%10);
+    },1000)
+</script>
+</html>

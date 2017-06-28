@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <script src="fontsize.js"></script>
+    <link rel="stylesheet" href="dist/css/swiper.min.css"/>
+    <style>
+        *{
+           padding: 0;
+            margin: 0;
+        }
+        .swiper-container{
+            width: 6.4rem;
+            height: 3rem;
+            font-size: 0.4rem;
+            text-align: center;
+            line-height: 3rem;
+        }
+        .swiper-slide:nth-child(1){
+            background: green;
+        }
+        .swiper-slide:nth-child(2){
+            background: red;
+        }
+        .swiper-slide:nth-child(3){
+            background: blue;
+        }
+    </style>
+    <title></title>
+</head>
+<body>
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">第一屏</div>
+        <div class="swiper-slide">第二屏</div>
+        <div class="swiper-slide">第三屏</div>
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+</div>
+</body>
+<script src="dist/js/swiper.min.js"></script>
+<script>
+    var mySwiper = new Swiper('.swiper-container',{
+        autoplay: 5000,
+        pagination : '.swiper-pagination',
+        effect : 'fade',
+        effect : 'flip',
+        effect : 'coverflow',
+        slidesPerView: 3,
+        centeredSlides: true,effect : 'cube',
+        prevButton:'.swiper-button-prev',
+        nextButton:'.swiper-button-next'
+
+
+    })
+</script>
+</html>
